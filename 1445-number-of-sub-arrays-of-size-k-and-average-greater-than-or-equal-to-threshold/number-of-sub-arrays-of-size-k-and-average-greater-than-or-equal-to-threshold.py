@@ -3,7 +3,6 @@ class Solution:
         su=0
         left=0
         count=0
-        mx=-10021
         for i in range(len(arr)):
             su+=arr[i]
             if i>=k-1:
