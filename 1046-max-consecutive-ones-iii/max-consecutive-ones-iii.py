@@ -5,10 +5,10 @@ class Solution:
         left=0
         for right in range(len(nums)):
             if nums[right]==0:
-                zeroscount+=1
+                zeroscount+=1       #find valid state,until valid state shrink()
             while zeroscount>k:
-                if nums[left]==0:
+                if nums[left]==0:     #shrink()
                     zeroscount-=1
                 left+=1
-            maxlength=max(maxlength,right-left+1)
+            maxlength=max(maxlength,right-left+1)      #update max length
         return maxlength
